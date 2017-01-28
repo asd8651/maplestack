@@ -1,0 +1,7 @@
+<!--若A頁面包括BC頁面的話 A頁面不能用<body>下去寫-->
+<frameset cols="10%,*"><!--frameset框架 cols 分割頁面 可用%或px來分-->
+    <frame name="frame1" src="frame2.html" ><!--noresize不允許框架改變大小-->
+    <frame name="frame2"src="frame3.html" noresize frameborder="1"><!--包含2.3.html//noresize frameborder="0"代表不用邊框。1為有邊框-->
+</frameset>
+
+<!--框架不能有文字EX:hello也不能用<body>來寫-->
