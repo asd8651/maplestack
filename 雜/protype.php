@@ -1,6 +1,16 @@
 <?php
 include("connshop.php");
 include("checkIN.php");
+?>修改
+<?
+$sqq="UPDATE `protype` SET Type='$_POST[Type]',Price='$_POST[Price]',Quantity='$_POST[Quantity]'";
+if(mysql_query($sqq) ){
+    ?>
+    <script type="text/javascript" >
+        alert('類別新增成功')
+    </script>
+    <?php
+}
 ?>
 <table width = "100%" border="1">
     <tr>
@@ -19,6 +29,7 @@ include("menu.php");
     <td>類別名稱</td>
     <td>售價</td>
     <td>數量</td>
+      <td>修改</td>
   </tr>
 <?php
 $sqllimit="SELECT * FROM protype";
@@ -35,7 +46,10 @@ while ( $row = mysql_fetch_array($result) ){
     <td>
         <input name="Quantity" type="text" id="Quantity" value="<?=$row['Quantity']?>" />
     </td>
-  </tr>
+    <td>
+        <input name="edit" type="submit" id="button" value="編輯"/>
+    </td>
+    </tr>
 <?php
 }
 ?>

@@ -4,7 +4,7 @@ include("checkIN.php");
 ?>
 <table width = "100%" border="1">
     <tr>
-        <td colspan="3">觀迎使用本購物商場系統</td>
+        <td colspan="3">觀迎使用本庫存系統</td>
     </tr>
     <tr>
         <td width="150">
