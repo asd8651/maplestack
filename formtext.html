@@ -1,0 +1,27 @@
+<head><title>表單練習</title></head>
+<body>
+<form method="post">
+    您的性別是：</br>
+    男<input type="radio" name="sex" value="man"></br><!--radio的name要設為一樣的，若為不一樣的話，會是可複選。-->
+    女<input type="radio" name="sex" value="woman"></br>
+    </br>
+    </br>
+    您最喜歡的運動：</br>
+    打球<input type="checkbox" name="sport" value="ball"></br>
+    跑步<input type="checkbox" name="sport" value="running"></br>
+    重訓<input type="checkbox" name="sport" value="fitness"></br>
+
+    <br/>
+    居住地
+    <select name="place" size="2" multiple><!--size一次出現幾個給你看 multiple複選-->
+        <option value="hsinchu">新竹</option>
+        <option value="taipei">台北</option>
+        <option value="kao">高雄</option>
+        <option value="taichung">台中</option>
+        <option value="hua">花蓮</optionvalue>
+    </select>
+    <br/>
+    <input type="image" src="Mlogo.jpg" width="100px" height="70px" name="submit"> <!--以圖片來做送出鈕-->
+
+</form>
+</body>
