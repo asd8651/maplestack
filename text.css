@@ -1,0 +1,25 @@
+.style1{
+    /*寬度*/
+    width: 500px;/*一定要有分號*/
+    height: 500px;
+    background-color:pink;
+    border: 5px solid darkgreen;
+    margin-top: 0px;
+    padding-top: 50px;/*padding內容的*/
+    padding-left: 50px;
+}
+.style1 table{
+    border:1px solid blue;
+    background-color:white;
+
+}
+.style2{
+    color:white;
+    font-style: oblique;/*斜體*/
+    width: 500px;
+    height: 500px;
+    border: 2px;
+    background-color:skyblue;
+    text-decoration:overline;/*上划線*/
+    /*font-weight粗體，underline底線，blink閃爍，linethrough貫穿線，*/
+}
