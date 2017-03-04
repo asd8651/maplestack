@@ -23,3 +23,78 @@
     text-decoration:overline;/*上划線*/
     /*font-weight粗體，underline底線，blink閃爍，linethrough貫穿線，*/
 }
+
+body{/*html選擇器*/
+
+}
+a.a1:link{ /*a:link在還沒發生事件前的樣子*/
+    text-decoration: none;
+    color:black;
+
+}
+a.a1:hover{  /*a:hover在鼠標移過去後的樣子*/
+    color:blue;
+    text-decoration: underline;
+    font-size:24px;
+}
+a.a1:visited{
+    color: red;
+}
+#id2{
+    font-style: oblique;
+}
+/*可同時使用ID跟CLASS選擇器*/
+a.a2:link{ /*a:link在還沒發生事件前的樣子*/
+    text-decoration: none;
+    color:bisque;
+
+}
+a.a2:hover{  /*a:hover在鼠標移過去後的樣子*/
+    color:blueviolet;
+    text-decoration: underline;
+    font-size:30px;
+}
+a.a2:visited{
+    color: darkgreen;
+}
+
+a.a3:link{ /*a:link在還沒發生事件前的樣子*/
+    text-decoration: none;
+    color:chartreuse;
+
+}
+a.a3:hover{  /*a:hover在鼠標移過去後的樣子*/
+    color:sienna;
+    text-decoration: underline;
+    font-size:24px;
+}
+a.a3:visited{
+    color: aqua;
+}
+
+*{/*優先權最低*/
+    /*margin:10px 40px 30px 20px;順序為上右下左順時針*/
+    padding:0px;
+    margin:0px;
+}
+
+#s1 {
+    font-size:30px;
+    color:green;
+    background-color: aqua;
+}
+#s1 span{
+    font-size:35px;
+    color:red;
+    font-style:italic;
+}
+#s1 span.ss1{
+    font-size:40px;
+    color:lavenderblush;
+}
+
+.style1 , .style2 {/*把不同選擇器間同樣的部分抽取出來，可減少冗餘*/
+    width: 600px;
+    height:600px;
+}
+

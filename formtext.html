@@ -1,12 +1,13 @@
 <html>
+<!--行內元素只會影響內容部分<span>，塊元素影響整行，兩種元素可以互相轉換 用display:inline(css)是行內<ex><div>-->
 <meta  http-equiv="Content-Type" content="text/html"><!--設定--><!--charset="utf-8"設定語言-->
-<head><title>表單練習</title></head>
-<body  marginheight="50px" method="post"><!--旁邊要留的空白-->
+<head ><title>表單練習</title></head>
+<body marginheight="50px" method="post"><!--旁邊要留的空白-->
 
 <marquee direction="left">跑馬燈</marquee>
 <marquee direction="left" behavior="scroll" scrolldelay=100 height="100px" loop="3" scrollamount=30 bgcolor="pink" width="40%"><img src="IMG_6560.JPG" width="50px" height="50px" ></marquee>
 <marquee direction="right">跑馬燈</marquee>
-<!--direction方向，behavior 走的方式(scroll一圈一圈，slide走過去就停，alternate來回，預設是scroll)，scrollamount走的速度，width走的範圍
+<!--direction方向，behavior 1走的方式(scroll一圈一圈，slide走過去就停，alternate來回，預設是scroll)，scrollamount走的速度，width走的範圍
 scrolldelay走多慢，-->
 
     您的性別是：</br>
@@ -42,8 +43,9 @@ scrolldelay走多慢，-->
     <video src="BCDHYz7q3UT.mp4" width="400px"  height="400px" controls muted poster="烤鴨.jpg" preload="none"></video>
     <!--controls會有播放鈕， loop播放完會重新播放 muted預設為靜音，poster設定影片開始前的圖片，是否在開始播放前顯示音量或更多-->
     <br/>
-
+        <img src="border.jpg" width="400px " height="400px">
         <img src="nien.gif" dynsrc="r8.mp4">
+<div>
     <input type="image" src="Mlogo.jpg" width="100px" height="70px" name="submit"> <!--以圖片來做送出鈕-->
 
 </form>
