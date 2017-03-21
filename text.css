@@ -25,6 +25,11 @@
 }
 
 body{/*html選擇器*/
+    border:1px  solid
+    width:600px
+    height:500px
+    margin:0 auto
+    /*若要讓body自動居中則輸入 margin:0 auto 第一個值控制上下，第二個值控制左右 auto自動居中*/
 
 }
 a.a1:link{ /*a:link在還沒發生事件前的樣子*/
