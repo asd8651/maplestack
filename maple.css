@@ -1,0 +1,26 @@
+body{
+
+    position: absolute;
+    width:1070px;  　   /*整個頁面區塊的寬度*/
+    margin:auto;   /*15px：上下邊緣距離 auto：左右隨畫面自動水平置中*/
+}
+.form1{
+    border-style:outset;
+    position: absolute;
+    margin-top: 250px;;
+    margin-left:400px;
+    width:200px;  　   /*整個頁面區塊的寬度*/
+    height:70px;
+    background-color: aqua;
+    padding:5px; /*在內容外，邊框內的部分,可以簡單做出每個DIV區隔*/
+}
+#all>.pro{
+    background-color: aqua;
+}
+.menutr{
+    text-align: center;
+    width: 20%;
+}
+.menutr2{
+
+}
