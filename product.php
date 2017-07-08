@@ -7,14 +7,53 @@
 include("connshop.php");
 include("checkIN.php");
 ?>
+<?php
+if(isset($_POST['proname'])){#編輯
+    mysql_query("UPDATE product SET proname = '$_POST[proname]' , price = '$_POST[price]' , quality = '$_POST[quality]' WHERE proname = '$_POST[proname]'");
+}?>
+<?
+$sss = "select * from product WHERE proname like '$_POST[searchText]'";
+$sea = mysql_query($sss) or die ( 'MySQL query error' );
+$eww = mysql_fetch_array($sea);
+if((isset($_POST['searchText']))){
+    ?>
+    <table border="1" width="100%" class="searchTable" >
+        <tr >
+            <td align="center">ID</td>
+            <td align="center">產品名稱</td>
+            <td align="center">價格</td>
+            <td align="center">數量</td>
+        </tr>
+
+        <tr>
+            <?php
+                $w = count($eww);
+                //取得$eww數量
+                ?><tr></tr><?
+                for ($i = 0; $i < $w; $i++) {
+                    ?>
+                    <td align="center">
+                        <? echo $eww[$i];?>
+                    </td>
+                    <?/*print_r顯示陣列*/
+                }
+            ?>
+    </table>
+<?
+}
+?>
+<form name="searchForm" method="post">
+<input type="text" name="searchText" value="" placeholder="欲查詢的品名…"><!--提示文字-->
+<input type="submit" name="searchSubmit" class="searchSubmit" value="查詢">
+</form>
 <table width = "100%" border="1" >
     <tr  class="menutr">
         <td width="10%" >觀迎使用</td>
         <td width="20%" >ID</td>
         <td width="20%" >產品名稱</td>
         <td width="20%" >價格</td>
-        <td width="10%" >數量</td>
-        <td width="20%" >操作</td>
+        <td width="20%" >數量</td>
+        <td width="10%" >操作</td>
     </tr>
     <tr class="menutr2">
         <td rowspan="65535" valign="top">
@@ -23,6 +62,7 @@ include("checkIN.php");
         ?>
         <a href="logout.php">登出</a>
         </td>
+
         <?php
         $conn = mysql_connect("localhost", "root", "asd865100") ;//連接資料庫
         mysql_select_db("product");//資料表
@@ -31,32 +71,28 @@ include("checkIN.php");
 
         //$row = mysql_fetch_array($result)//印出資料
         while($row = mysql_fetch_array($result)){
-            $ID=$row[0]
         ?>
-        <td align="center"><?=$row['ID']?></td>
-        <td align="center"><?=$row['proname']?></td>
-        <td align="center"><?=$row['price']?></td>
-        <td align="center"><?=$row['quality']?></td>
-        <td align="center">
-            <a href="proedit.php?SID=<?=$row['proedit']?>">編輯</a>
-            <!--<input type="submit" name="delete" value="刪除">-->
-            <a href="del.php?ID=<? echo $row[ID]?>&action=del">刪除</a>
-        </td>
+        <td align="center" ><div name="diva"><?=$row['ID']?></div></td>
+        <td align="center"><div name="diva"><?=$row['proname']?></div></td>
+        <td align="center"><div name="diva"><?=$row['price']?></div></td>
+        <td align="center"><div name="diva"><?=$row['quality']?></div></td>
+        <td align="center"><a href="del.php?ID=<? echo $row[ID]?>&action=del">刪除</a></td>
         <tr>
         </tr>
-            <?
-        }
-        /*$delete=!empty($_GET["delete"]) ? $_GET["delete"] : null;
-        echo($delete);
-        if($delete='刪除'){
-            $conn = mysqli_connect("localhost", "root", "asd865100") ;//連接資料庫
-            mysqli_select_db($conn,"product");
-            $del ="DELETE FROM product"; #WHERE ID = $ID";  //刪除資料
-            mysqli_query($conn,$del);
-            mysqli_close($conn);
-        }*/
-        ?>
+    <?} ?>
 </table>
+            <form method="post" name="edit">
+                <table width="100%" >
+                    <tr>
+                        <td width="10%" ></td>
+                        <td><input type="hidden" name="IDedit" value=""></td>
+                        <td>商品名稱<input type="text" name="proname" value=""></td>
+                        <td>價格<input type="text" name="price" value=""></td>
+                        <td>數量<input type="text" name="quality" value=""></td>
+                        <td><input type="submit" name="edit" value="編輯" ></td>
+                </table>
+            </form>
+
 <?php
 if($numpage!=1){
 ?>

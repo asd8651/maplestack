@@ -4,12 +4,14 @@
 <?php
 include("connshop.php");
 include("checkIN.php");
-if ($_POST['proname'] == "") {
-    ?>
-    <script type="text/javascript">
-        alert('類別新增失敗')
-    </script>
-    <?php
+if(isset($_POST['add'])) {
+    if ($_POST['proname'] == "") {
+        ?>
+        <script type="text/javascript">
+            alert('類別新增失敗')
+        </script>
+        <?php
+    }
 }
 if($_POST['proname']){
     $sql = "INSERT INTO `product`(`ID`, `proname`, `Price`, `quality`, `proedit`) VALUES ('" . $_POST['ID'] . "','". $_POST['proname'] . "','" . $_POST['Price'] . "','" . $_POST['quality'] . "','" . $_POST['proedit'] . "');";
@@ -26,7 +28,7 @@ if($_POST['proname']){
 ?>
 <td width="*" colspan="2"><table width="100%" border="1">
 <tr>
-    <td>編號</td>
+    <td></td>
     <td>產品名稱</td>
     <td>價格</td>
     <td>數量</td>
@@ -34,7 +36,7 @@ if($_POST['proname']){
         <form action="" method="post">
             <tr>
                 <td>
-                    <input name="ID" type="text" id="ID" />
+                    <input name="ID" type="hidden" id="ID" />
                 </td>
                 <td>
                     <input name="proname" type="text" id="proname" />

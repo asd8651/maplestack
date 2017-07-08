@@ -1,5 +1,4 @@
 body{
-
     position: absolute;
     width:1070px;  　   /*整個頁面區塊的寬度*/
     margin:auto;   /*15px：上下邊緣距離 auto：左右隨畫面自動水平置中*/
@@ -21,6 +20,6 @@ body{
     text-align: center;
     width: 20%;
 }
-.menutr2{
-
+.diva{
+    text-align: center;
 }
